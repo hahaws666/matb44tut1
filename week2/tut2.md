@@ -2,12 +2,25 @@
 
 ## Week 2 Topics
 
-### Separable Ordinary Differential Equations
+### First Order Ordinary Differential Equations
 
-- Definition and identification
-- Solution method
+#### Separable ODEs
+- Definition and identification: $\frac{dy}{dx} = f(x)g(y)$
+- Solution method: separation and integration
 - Initial value problems
-- Key examples
+- Key examples with rational functions
+
+#### Homogeneous ODEs
+- Definition: $\frac{dy}{dx} = F\left(\frac{y}{x}\right)$
+- Solution method: substitution $v = \frac{y}{x}$
+- Step-by-step methodology (7 steps)
+- Examples in differential form: $P(x,y)dx + Q(x,y)dy = 0$
+
+#### ODE Classification
+- Autonomous vs non-autonomous
+- Separable vs homogeneous
+- Linear coefficient ODEs
+- Recognition and solution strategies
 
 ## Definition and Method
 
