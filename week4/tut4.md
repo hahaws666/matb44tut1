@@ -210,26 +210,43 @@ $$\tfrac{1}{2}x^2 + \tfrac{1}{2}y^2 = C$$
 
 ### example 6 applying method 5
 
-**Solve**: $(y^2 + x^2y)\,dx + (x^2 + xy^2)\,dy = 0$ with $P=y^2+x^2y$, $Q=x^2+xy^2$.
+**Solve**: $(y^2 + 3xy)\,dx + (x^2 + xy)\,dy = 0$ with $P=y^2+3xy$, $Q=x^2+xy$.
 
 **Solution (Method 5: Monomial Integrating Factor)**:
 
 **Step 1**: Check exactness
-$$P_y = 2y + x^2, \qquad Q_x = 2x + y^2 \;(\neq)$$
+$$P_y = 2y + 3x, \qquad Q_x = 2x + y \;(\neq)$$
 
 **Step 2**: Assume a monomial integrating factor
 $$\mu(x,y) = x^a y^b$$
 and require exactness of $\mu P\,dx + \mu Q\,dy=0$.
 
 **Step 3**: Expand $\mu P$ and $\mu Q$
-$$x^a y^b P = x^a y^{b+2} + x^{a+2}y^{b+1}, \qquad x^a y^b Q = x^{a+2}y^{b} + x^{a+1}y^{b+2}.$$
+$$x^a y^b P = x^a y^{b+2} + 3x^{a+1}y^{b+1}, \qquad x^a y^b Q = x^{a+2}y^{b} + x^{a+1}y^{b+1}.$$
 
 **Step 4**: Differentiate
-$$\partial_y(x^a y^b P) = (b+2)x^a y^{b+1} + (b+1)x^{a+2}y^{b},$$
-$$\partial_x(x^a y^b Q) = (a+2)x^{a+1}y^{b} + (a+1)x^{a}y^{b+2}.$$
+$$\partial_y(x^a y^b P) = (b+2)x^a y^{b+1} + 3(b+1)x^{a+1}y^{b},$$
+$$\partial_x(x^a y^b Q) = (a+2)x^{a+1}y^{b} + (a+1)x^{a}y^{b+1}.$$
 
 **Step 5**: Match coefficients
-The monomials $\{x^a y^{b+1},\, x^{a+2}y^{b}\}$ and $\{x^{a+1}y^{b},\, x^{a}y^{b+2}\}$ cannot be paired to have identical exponents in $x$ and $y$ for any constants $a,b$. Equivalently, using
-$$M_y - N_x = a\,\frac{N}{x} - b\,\frac{M}{y} \;(M=P,\;N=Q),$$
-the resulting linear system for $a,b$ is inconsistent.
+Match like monomials $x^a y^{b+1}$ and $x^{a+1}y^{b}$:
+$$b+2 = a+1, \qquad 3(b+1) = a+2 \;\Rightarrow\; a=1,\; b=0.$$
+
+**Step 6**: Integrating factor
+$$\mu(x,y) = x.$$
+
+**Step 7**: Multiply and check exactness
+After multiplying by $x$:
+$$\tilde P = x y^2 + 3x^2 y, \qquad \tilde Q = x^3 + x^2 y,$$
+$$\tilde P_y = 2xy + 3x^2, \qquad \tilde Q_x = 3x^2 + 2xy \;\Rightarrow\; \text{exact}.$$
+
+**Step 8**: Potential function
+From $\phi_x = \tilde P$:
+$$\phi(x,y) = \int (x y^2 + 3x^2 y)\,dx = \tfrac{1}{2}x^2 y^2 + x^3 y + g(y).$$
+
+**Step 9**: Determine $g(y)$
+$$\phi_y = x^2 y + x^3 + g'(y) = \tilde Q = x^3 + x^2 y \;\Rightarrow\; g'(y)=0.$$
+
+**Step 10**: Implicit solution
+$$\tfrac{1}{2}x^2 y^2 + x^3 y = C.$$
 
