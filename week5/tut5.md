@@ -78,6 +78,38 @@ Characteristic: $(r^2 + 4r + 13)^2 = 0$ (i.e., $r = -2 \pm 3i$ with multiplicity
 General solution: $y(x) = e^{-2x}\Big[(C_1 + C_3 x)\cos(3x) + (C_2 + C_4 x)\sin(3x)\Big]$.
 
 
+## Bernoulli Equation (Supplement)
+
+### Definition
+
+- A Bernoulli equation is a first-order nonlinear ODE of the form
+  $$\frac{dy}{dx} + P(x)\,y = Q(x)\,y^n,\quad n\neq 0,1.$$
+
+### Method (Linearization by substitution)
+
+1. Let $v = y^{1-n}$.
+2. Then $\dfrac{dv}{dx} = (1-n)\,y^{-n}\,\dfrac{dy}{dx}$, and the equation becomes a linear ODE in $v$:
+   $$\frac{dv}{dx} + (1-n)P(x)\,v = (1-n)Q(x).$$
+3. Solve the linear equation for $v(x)$ using an integrating factor; recover $y$ from $y = v^{\tfrac{1}{1-n}}$.
+
+### Example: Solve with $n=3$
+
+Solve
+$$\frac{dy}{dx} + \frac{2}{x}y = x^2 y^3,\quad x>0.$$
+
+Here $n=3$, $P(x)=\tfrac{2}{x}$, $Q(x)=x^2$. Let $v = y^{1-3} = y^{-2}$. Then
+$$\frac{dv}{dx} + (1-3)P(x)\,v = (1-3)Q(x) \;\Rightarrow\; \frac{dv}{dx} - \frac{4}{x}v = -2x^2.$$
+Integrating factor: $\mu(x) = e^{\int -\tfrac{4}{x}dx} = x^{-4}$.
+Then
+$$\big(x^{-4}v\big)' = -2x^2\cdot x^{-4} = -2x^{-2} \;\Rightarrow\; x^{-4}v = \int -2x^{-2} dx = 2x^{-1} + C.$$
+Hence $v = y^{-2} = 2x^{3} + Cx^{4}$, and
+$$y(x) = \big(2x^{3} + Cx^{4}\big)^{-1/2},\quad x>0.$$
+
+### Practice
+
+Solve for $x>0$:
+$$\frac{dy}{dx} - \frac{1}{x}y = x\,y^2.$$
+
 ## Quick Reminder
 
 - **Midterm exam:** Next week.
