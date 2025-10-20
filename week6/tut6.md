@@ -30,10 +30,11 @@
 
 ### Linear Coefficient ODEs (Differential Form)
 
-- Form: $(ax + by + c)\,dx + (dx + ey + f)\,dy = 0$, with $\begin{vmatrix} a & b \\ d & e \end{vmatrix} \neq 0$.
+- Form: $(ax + by + c)\,dx + (dx + ey + f)\,dy = 0$, with $\begin{vmatrix} a & b \\ d & e \end{vmatrix} = det$.
 - Strategy:
-  - If $c=f=0$: homogeneous in $(x,y)$, use $v=y/x$.
-  - Else: find critical point $(h,k)$ from $ah+bk+c=0$, $dh+ek+f=0$, then set $u=x-h$, $v=y-k$ to homogenize.
+  - If $c = f = 0$: homogeneous in $(x,y)$, use $v = y/x$.
+  - Else if $\det \neq 0$: using substitution setting $ah + bk + c = u$, $dh + ek + f = v$, to homogenize.
+  - Else: substitution with $y = y$, $ah + bk + c = u$.
 
 ### Exact Differential Equations
 
